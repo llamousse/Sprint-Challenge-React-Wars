@@ -30,10 +30,15 @@ const App = () => {
     <div className="App">
       <h1 className="Header">React Wars</h1>
 
-      {char.map(data => (
-        <StarWars name={data.name}
-                  birthday={data.birth_year} /> 
-      ))}
+      {char.map((data, index) => (
+        <StarWars key={index} 
+          name={data.name}
+          birthday={data.birth_year}
+          height={data.height}
+          mass={data.mass}
+          skinColor={data.skin_color}
+          eyeColor={data.eye_color} /> 
+      ))}      
 
     </div>
   );
